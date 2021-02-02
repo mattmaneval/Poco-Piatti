@@ -3,7 +3,9 @@ import styled from 'styled-components';
 import Image from 'next/image';
 import Link from 'next/link';
 import LogoLink from './LogoLink';
+import MenuButton from './MenuButton';
 import mixins from '../styles/mixins';
+import media from '../styles/media';
 import theme from '../styles/theme';
 const { color, fonts, space } = theme;
 
@@ -24,6 +26,10 @@ const HeaderStyles = styled.header`
   nav {
     display: inline-block;
     position: relative;
+
+    @media ${media.primary} {
+      display: none;
+    }
   }
 
   a {
@@ -61,6 +67,7 @@ const Header = () => {
             <a>Contact</a>
           </Link>
         </nav>
+        <MenuButton />
       </div>
     </HeaderStyles>
   );
