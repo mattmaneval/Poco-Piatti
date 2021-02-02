@@ -29,6 +29,10 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
   }
 
+  body {
+    position: relative;
+  }
+
   section {
     padding: 6em 0;
     display: inline-block;

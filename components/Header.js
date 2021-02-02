@@ -13,7 +13,6 @@ const { color, fonts, space } = theme;
 const HeaderStyles = styled.header`
   padding: ${space.halfSpace} 0;
   background-color: ${color.foreground};
-  width: 100%;
 
   .wrap {
     ${mixins.wrap};
@@ -21,7 +20,8 @@ const HeaderStyles = styled.header`
   }
 
   .header-logo {
-    transform: translateX(-1.6rem);
+    transform: translateX(-1.6em);
+
   }
 
   nav {
@@ -57,7 +57,9 @@ function Header() {
   return (
     <HeaderStyles menu={menu}>
       <div className="wrap">
-        <LogoLink className="header-logo"/>
+        <div className="header-logo">
+          <LogoLink />
+        </div>
         <nav>
           <Link href="/about">
             <a>Menu</a>
@@ -76,8 +78,8 @@ function Header() {
           </Link>
         </nav>
         <MenuButton menu={menu} onClick={handleClick} />
-        <MobileMenu menu={menu} />
       </div>
+      <MobileMenu menu={menu} />
     </HeaderStyles>
   );
 }

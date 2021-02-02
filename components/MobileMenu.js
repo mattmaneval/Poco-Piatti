@@ -8,23 +8,19 @@ import theme from '../styles/theme';
 const { color, fonts, space } = theme;
 
 const MobileMenuStyles = styled.div`
-  width: 100%;
+  width: 300px;
   background-color: ${color.background};
   height: 100vh;
-  transform: ${({ menu }) => menu ? 'translateX(0)' : 'translateX(100%)'};
+  transform: ${({ menu }) => menu ? 'translateX(0)' : 'translateX(300px)'};
   opacity: ${({ menu }) => menu ? '1' : '0'};
   transition: all 0.9s;
-  padding: 6em 2em;
-  position: fixed;
+  padding: 6em 2em 0 2em;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   z-index: 2;
-  overflow-y: scroll;
-
-  ::-webkit-scrollbar {
-    background-color: ${color.backgroundTert};
-  }
+  overflow-x: hidden;
 
   .mobile-nav {
     display: inline-block;
@@ -72,6 +68,9 @@ const MobileMenu = (props) => {
   return (
       <MobileMenuStyles menu={props.menu}>
         <nav className="mobile-nav">
+          <Link href="/">
+            <a>Home</a>
+          </Link>
           <Link href="/about">
             <a>Menu</a>
           </Link>
@@ -89,7 +88,6 @@ const MobileMenu = (props) => {
           </Link>
         </nav>
         <div className="mobile-menu-contact">
-          <h3>Poco Piatti</h3>
           <a href="tel:419-931-0281">419-931-0281</a>
           <a href="mailto:pocopiattiparty@gmail.com">pocopiattiparty@gmail.com</a>
         </div>

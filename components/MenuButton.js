@@ -18,6 +18,7 @@ const ButtonStyle = styled.button`
   z-index: 3;
   height: 0.8rem;
   width: 2rem;
+  transform: translatex(1.8em);
 
   @media ${media.primary} {
     display: flex;
