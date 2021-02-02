@@ -10,6 +10,7 @@ const theme = {
   space: {
     space: '2rem',
     halfSpace: '1rem',
+    quarterSpace: '0.5rem',
     gap: '2rem',
   },
 
@@ -20,7 +21,7 @@ const theme = {
     backgroundTert: '#bf5252',
     foreground: '#ffffff',
     callout: '#3b5998',
-    foregroundLite: '',
+    foregroundDim: '#8f9296',
   },
 
   // Fonts

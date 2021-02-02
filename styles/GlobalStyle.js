@@ -76,12 +76,11 @@ const GlobalStyle = createGlobalStyle`
   h4 {
     color: ${color.foreground};
     margin-bottom: ${space.halfSpace};
-    font-size: 1.5em;
-    line-height: 1.4;
+    font-size: 3.65em;
     font-family: ${fonts.subHeading};
 
     @media ${media.secondary} {
-      font-size: 1.6em;
+      font-size: 3em;
     }
   }
 
@@ -90,6 +89,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1.1rem;
     letter-spacing: 0.3em;
     text-transform: uppercase;
+    color: ${color.foreground};
   }
 
   p {

@@ -11,7 +11,7 @@ const mixins = {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    max-width: 80em;
+    max-width: 80rem;
     width: ${responsive.wrap};
 
     @media ${media.secondary} {
@@ -30,6 +30,20 @@ const mixins = {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  `,
+
+  // Section
+  section: css`
+    padding: 6em 0;
+    display: inline-block;
+    position: relative;
+    clear: both;
+    float: none;
+    width: 100%;
+
+    @media ${media.secondary} {
+      padding: 3em 0;
+    }
   `,
 
   // Box Shadow

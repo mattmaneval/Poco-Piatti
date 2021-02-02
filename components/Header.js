@@ -17,6 +17,10 @@ const HeaderStyles = styled.header`
     ${mixins.flexBetween};
   }
 
+  a:first-of-type {
+    transform: translateX(-1.6rem);
+  }
+
   nav {
     display: inline-block;
     position: relative;
