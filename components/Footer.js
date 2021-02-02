@@ -109,6 +109,8 @@ const FooterStyles = styled.footer`
   }
 `;
 
+const year = new Date().getFullYear();
+
 const Footer = () => {
   return (
     <FooterStyles>
@@ -141,7 +143,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="copyright">
-        Copyright &#169; 2021 Poco Piatti All Rights Reserved.
+        Copyright &#169; {year} Poco Piatti All Rights Reserved.
         Site by <a href="https://mattmaneval.com/">Matt Maneval</a>.
       </div>
     </FooterStyles>

@@ -26,6 +26,11 @@ const GlobalStyle = createGlobalStyle`
   html,
   body {
     background-color: ${color.background};
+    overflow-x: hidden;
+  }
+
+  body {
+    position: relative;
   }
 
   section {

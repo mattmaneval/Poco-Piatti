@@ -1,29 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 import Link from 'next/link';
 import LogoLink from './LogoLink';
+import MenuButton from './MenuButton';
+import MobileMenu from './MobileMenu';
 import mixins from '../styles/mixins';
+import media from '../styles/media';
 import theme from '../styles/theme';
 const { color, fonts, space } = theme;
 
 const HeaderStyles = styled.header`
   padding: ${space.halfSpace} 0;
   background-color: ${color.foreground};
-  width: 100%;
 
   .wrap {
     ${mixins.wrap};
     ${mixins.flexBetween};
   }
 
-  a:first-of-type {
-    transform: translateX(-1.6rem);
+  .header-logo {
+    transform: translateX(-1.6em);
+
   }
 
   nav {
     display: inline-block;
     position: relative;
+
+    @media ${media.primary} {
+      display: none;
+    }
   }
 
   a {
@@ -39,11 +46,20 @@ const HeaderStyles = styled.header`
   }
 `;
 
-const Header = () => {
+function Header() {
+
+  const [menu, active] = useState(false);
+
+  function handleClick() {
+    menu ? active(false) : active(true);
+  }
+
   return (
-    <HeaderStyles>
+    <HeaderStyles menu={menu}>
       <div className="wrap">
-        <LogoLink />
+        <div className="header-logo">
+          <LogoLink />
+        </div>
         <nav>
           <Link href="/about">
             <a>Menu</a>
@@ -61,7 +77,9 @@ const Header = () => {
             <a>Contact</a>
           </Link>
         </nav>
+        <MenuButton menu={menu} onClick={handleClick} />
       </div>
+      <MobileMenu menu={menu} />
     </HeaderStyles>
   );
 }
