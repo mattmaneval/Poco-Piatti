@@ -1,34 +1,13 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import theme from '../styles/theme';
+import media from '../styles/media';
 import mixins from '../styles/mixins';
 const { color } = theme;
 
-const ButtonContainer = styled.div`
-  .active {
-    span {
-      &:before,
-      &:after {
-        top: 0;
-        left: 0;
-      }
-
-      &:before {
-        transform: rotate(45deg);
-      }
-
-      &:after {
-        transform: rotate(-45deg);
-      }
-    }
-  }
-`;
-
-const ButtonStyle = styled.button.attrs(props => ({
-  className: props.className,
-}))`
+const ButtonStyle = styled.button`
+  display: none;
   -webkit-tap-highlight-color: transparent;
-  display: flex;
   justify-content: flex-start;
   align-items: center;
   padding: 1.5em;
@@ -39,6 +18,10 @@ const ButtonStyle = styled.button.attrs(props => ({
   z-index: 3;
   height: 0.8rem;
   width: 2rem;
+
+  @media ${media.primary} {
+    display: flex;
+  }
 
   span {
     display: inline-block;
@@ -51,37 +34,34 @@ const ButtonStyle = styled.button.attrs(props => ({
       ${mixins.animate};
       content: "";
       position: absolute;
-      background-color: ${color.background};
-      height: 0.1rem;
-      width: 3rem;
+      background-color: ${({ menu }) => menu ? `${color.foreground}` : `${color.foregroundDim}`};;
+      height: 0.15rem;
+      width: 1.65rem;
       border-radius: 5em;
     }
 
     &:before {
-      top: -6px;
+      top: ${({ menu }) => menu ? '0' : '-6px'};;
       left: 0;
+      transform: ${({ menu }) => menu ? 'rotate(45deg)' : 'rotate(0)'};
     }
 
     &:after {
-      top: 6px;
+      top: ${({ menu }) => menu ? '0' : '6px'};
       left: 0;
+      transform: ${({ menu }) => menu ? 'rotate(-45deg)' : 'rotate(0)'};
     }
   }
 `;
 
-const MenuButton = () => {
-
-  const [menu, active] = useState(false);
-
+const MenuButton = props => {
   return (
-    <ButtonContainer>
       <ButtonStyle
-        className={!menu ? null : 'active'}
-        onClick={() => menu ? active(false) : active(true)}
+        menu={props.menu}
+        onClick={props.onClick}
       >
         <span></span>
       </ButtonStyle>
-    </ButtonContainer>
   );
 }
 

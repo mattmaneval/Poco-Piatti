@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 import Link from 'next/link';
 import LogoLink from './LogoLink';
 import MenuButton from './MenuButton';
+import MobileMenu from './MobileMenu';
 import mixins from '../styles/mixins';
 import media from '../styles/media';
 import theme from '../styles/theme';
@@ -19,7 +20,7 @@ const HeaderStyles = styled.header`
     ${mixins.flexBetween};
   }
 
-  a:first-of-type {
+  .header-logo {
     transform: translateX(-1.6rem);
   }
 
@@ -45,11 +46,18 @@ const HeaderStyles = styled.header`
   }
 `;
 
-const Header = () => {
+function Header() {
+
+  const [menu, active] = useState(false);
+
+  function handleClick() {
+    menu ? active(false) : active(true);
+  }
+
   return (
-    <HeaderStyles>
+    <HeaderStyles menu={menu}>
       <div className="wrap">
-        <LogoLink />
+        <LogoLink className="header-logo"/>
         <nav>
           <Link href="/about">
             <a>Menu</a>
@@ -67,7 +75,8 @@ const Header = () => {
             <a>Contact</a>
           </Link>
         </nav>
-        <MenuButton />
+        <MenuButton menu={menu} onClick={handleClick} />
+        <MobileMenu menu={menu} />
       </div>
     </HeaderStyles>
   );
