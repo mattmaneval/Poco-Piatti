@@ -53,7 +53,7 @@ const Resets = css`
   border-spacing: 0;
   }
   ::selection {
-    background: ${color.backgroundAlt};
+    background: ${color.callout};
     color: ${color.foreground};
   }
   ::-moz-selection {

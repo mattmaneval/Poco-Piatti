@@ -44,21 +44,17 @@ const GlobalStyle = createGlobalStyle`
   h1 {
     font-family: ${fonts.title};
     font-size: 6em;
-    text-transform: uppercase;
-    color: ${color.foreground};
+    color: ${color.background};
     margin-bottom: ${space.space};
-    text-shadow: 0.3rem 0.3rem ${color.backgroundAlt};
     letter-spacing: 0.4rem;
     line-height: 110%;
 
     @media ${media.primary} {
       font-size: 4em;
-      text-shadow: 0.25rem 0.25rem ${color.backgroundAlt};
     }
 
     @media ${media.secondary} {
       font-size: 3em;
-      text-shadow: 0.2rem 0.2rem ${color.backgroundAlt};
     }
   }
 
@@ -109,7 +105,7 @@ const GlobalStyle = createGlobalStyle`
       cursor: pointer;
 
       &:hover {
-        color: ${color.callout};
+        color: ${color.backgroundTert};
       }
     }
   }

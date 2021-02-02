@@ -11,7 +11,7 @@ const mixins = {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    max-width: 60em;
+    max-width: 80em;
     width: ${responsive.wrap};
 
     @media ${media.secondary} {
@@ -26,7 +26,7 @@ const mixins = {
     align-items: center;
   `,
 
-  flexBetween: css `
+  flexBetween: css`
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,7 +39,7 @@ const mixins = {
 
   // Animate
   animate: css`
-    transition: 0.2s all ease-in;
+    transition: 0.2s all ease-in-out;
   `,
 };
 

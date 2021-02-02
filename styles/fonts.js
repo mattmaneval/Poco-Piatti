@@ -1,18 +1,20 @@
 import { css } from 'styled-components';
-import EbGaramondRegularWoff from '../public/fonts/ebgaramond-variablefont_wght-webfont.woff';
-import EbGaramondRegularWoff2 from '../public/fonts/ebgaramond-variablefont_wght-webfont.woff2';
-import OstrichsansHeavyWoff from '../public/ostrichsans-heavy-webfont.woff';
-import OstrichsansHeavyWoff2 from '../public/ostrichsans-heavy-webfont.woff2';
 
 const Fonts = css`
   @font-face {
-      font-family: 'Eb Garamond';
-      src: url(${EbGaramondRegularWoff2}) format('woff2'), url(${OstrichsansHeavyWoff}) format('woff');
+      font-family: 'eb garamondregular';
+      src: url('/assets/fonts/ebgaramond-variablefont-wght-webfont.woff2') format('woff2'),
+        url('/assets/fonts/ebgaramond-variablefont-wght-webfont.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
   };
 
   @font-face {
-      font-family: 'Ostich Sans Heavy';
-      src: url(${OstrichsansHeavyWoff2}) format('woff2'), url(${OstrichsansHeavyWoff}) format('woff');
+      font-family: 'ostrich sansheavy';
+      src: url('/assets/fonts/ostrichsans-heavy-webfont.woff2') format('woff2'),
+        url('/assets/fonts/ostrichsans-heavy-webfont.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
   };
 `;
 

@@ -15,20 +15,20 @@ const theme = {
 
   //Color
   color: {
-    background: '#fffcf9',
-    backgroundAlt: '#1c7c54',
-    backgroundTert: '#be0a02',
-    foreground: '#000000',
-    callout: '#256eff',
-    foregroundLite: 'rgba(1, 1, 1, 0.2)',
+    background: '#171717',
+    backgroundAlt: '',
+    backgroundTert: '#bf5252',
+    foreground: '#ffffff',
+    callout: '#3b5998',
+    foregroundLite: '',
   },
 
   // Fonts
   fonts: {
-    font: 'Junction Regular',
-    title: 'Cooper Hewitt Heavy',
-    heading: 'Cooper Hewitt Bold',
-    subHeading: 'Eb Garamond Regular',
+    font: 'eb garamondregular',
+    title: 'ostrich sansheavy',
+    heading: 'ostrich sansheavy',
+    subHeading: 'eb garamondregular',
   },
 }
 
