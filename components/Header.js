@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 import Link from 'next/link';
-import LogoLink from './LogoLink';
+import Logo from './icons/Logo';
 import MenuButton from './MenuButton';
 import MobileMenu from './MobileMenu';
 import mixins from '../styles/mixins';
@@ -11,8 +11,7 @@ import theme from '../styles/theme';
 const { color, fonts, space } = theme;
 
 const HeaderStyles = styled.header`
-  padding: ${space.halfSpace} 0;
-  background-color: ${color.foreground};
+  padding: 3rem 0;
 
   .wrap {
     ${mixins.wrap};
@@ -20,8 +19,12 @@ const HeaderStyles = styled.header`
   }
 
   .header-logo {
-    transform: translateX(-1.6em);
+    transform: translateX(-1em);
+    width: 12em;
 
+    @media ${media.primary} {
+      width: 8em;
+    }
   }
 
   nav {
@@ -36,9 +39,10 @@ const HeaderStyles = styled.header`
   a {
     ${mixins.animate};
     font-family: ${fonts.heading};
-    color: ${color.background};
+    color: ${color.foreground};
     padding: ${space.halfSpace};
     font-size: 1.25rem;
+    letter-spacing: 0.15em;
 
     &:hover {
       color: ${color.backgroundTert};
@@ -58,7 +62,7 @@ function Header() {
     <HeaderStyles menu={menu}>
       <div className="wrap">
         <div className="header-logo">
-          <LogoLink />
+          <Logo />
         </div>
         <nav>
           <Link href="/about">

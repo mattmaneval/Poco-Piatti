@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { ThemeProvider } from 'styled-components';
 import { theme, GlobalStyle } from '../styles';
 import Header from '../components/Header';
+import Hero from '../components/Hero';
 import Footer from '../components/Footer';
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       </Head>
       <GlobalStyle />
       <Header />
+      <Hero />
       <Footer />
     </div>
   )

@@ -48,11 +48,10 @@ const GlobalStyle = createGlobalStyle`
 
   h1 {
     font-family: ${fonts.title};
-    font-size: 6em;
+    font-size: 7em;
     color: ${color.background};
     margin-bottom: ${space.space};
-    letter-spacing: 0.4rem;
-    line-height: 110%;
+    line-height: 85%;
 
     @media ${media.primary} {
       font-size: 4em;
@@ -68,7 +67,7 @@ const GlobalStyle = createGlobalStyle`
     color: ${color.foreground};
     font-family: ${fonts.title};
     font-size: 1.65em;
-    margin-bottom: ${space.space};
+    margin-bottom: 1.25rem;
     text-transform: uppercase;
     text-shadow: 0.1rem 0.1rem ${color.backgroundAlt};
 
@@ -90,11 +89,11 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h5 {
-    font-family: ${fonts.heading};
+    font-family: ${fonts.font};
     font-size: 1.1rem;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: ${color.foreground};
+    letter-spacing: 0.1em;
+    // text-transform: uppercase;
+    color: ${color.foregroundDim};
   }
 
   p {
