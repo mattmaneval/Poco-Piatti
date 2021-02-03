@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 import Link from 'next/link';
 import theme from '../styles/theme';
+import media from '../styles/media';
 const { color, fonts } = theme;
 
 const SecondaryCtaStyle = styled.a`
+  display: inline-block;
   font-family: ${fonts.heading};
   letter-spacing: 0.1em;
   font-size: 1.35rem;
@@ -11,11 +13,15 @@ const SecondaryCtaStyle = styled.a`
   padding: 1.15rem 3.65rem;
   position: relative;
 
+  @media ${media.secondary} {
+    padding: 1.15rem 1.65rem;
+  }
+
   &:before {
     content: "";
     position: absolute;
     width: 3.7em;
-    height: 0.25em;
+    height: 0.15rem;
     bottom: 0.7em;
     display: inline-block;
     background-color: ${color.foreground};

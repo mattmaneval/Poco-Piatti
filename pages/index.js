@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { theme, GlobalStyle } from '../styles';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
+import ThePocoExperience from '../components/ThePocoExperience';
 import Footer from '../components/Footer';
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <GlobalStyle />
       <Header />
       <Hero />
+      <ThePocoExperience />
       <Footer />
     </div>
   )

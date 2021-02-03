@@ -49,7 +49,7 @@ const GlobalStyle = createGlobalStyle`
   h1 {
     font-family: ${fonts.title};
     font-size: 7em;
-    color: ${color.background};
+    color: ${color.foreground};
     margin-bottom: ${space.space};
     line-height: 85%;
 
@@ -98,7 +98,7 @@ const GlobalStyle = createGlobalStyle`
 
   p {
     font-family: ${fonts.font};
-    color: ${color.foreground};
+    color: ${color.background};
     line-height: 140%;
     font-size: 1.25em;
 
@@ -112,6 +112,10 @@ const GlobalStyle = createGlobalStyle`
         color: ${color.backgroundTert};
       }
     }
+  }
+
+  .wrap {
+    ${mixins.wrap}
   }
 `;
 

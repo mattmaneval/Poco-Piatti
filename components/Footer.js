@@ -24,7 +24,6 @@ const FooterStyles = styled.footer`
   ${mixins.section};
 
   .wrap {
-    ${mixins.wrap};
     display: flex;
 
     @media ${media.primary} {

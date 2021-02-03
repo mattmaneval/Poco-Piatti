@@ -14,7 +14,6 @@ const HeaderStyles = styled.header`
   padding: 3rem 0;
 
   .wrap {
-    ${mixins.wrap};
     ${mixins.flexBetween};
   }
 
