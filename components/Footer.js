@@ -76,13 +76,13 @@ const FooterStyles = styled.footer`
     ${footerLink.hover};
     display: inline-block;
     position: relative;
-    padding: ${space.halfSpace};
-    transform: translateY(-0.6em);
+    padding: 0.3rem;
+    transform: translateY(0.3em);
     color: ${color.foregroundDim};
 
     @media ${media.primary} {
       transform: translateY(0);
-      transform: translateX(-1.3em);
+      transform: translateX(-0.7em);
     }
   }
 

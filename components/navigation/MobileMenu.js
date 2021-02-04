@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
-import Facebook from './icons/Facebook';
-import Instagram from './icons/Instagram';
-import mixins from '../styles/mixins';
-import theme from '../styles/theme';
+import Facebook from '../icons/Facebook';
+import Instagram from '../icons/Instagram';
+import mixins from '../../styles/mixins';
+import theme from '../../styles/theme';
 const { color, fonts, space } = theme;
 
 const MobileMenuStyles = styled.div`

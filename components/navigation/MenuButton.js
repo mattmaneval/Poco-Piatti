@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+  import React, { useState } from 'react';
 import styled from 'styled-components';
-import theme from '../styles/theme';
-import media from '../styles/media';
-import mixins from '../styles/mixins';
+import theme from '../../styles/theme';
+import media from '../../styles/media';
+import mixins from '../../styles/mixins';
 const { color } = theme;
 
 const ButtonStyle = styled.button`

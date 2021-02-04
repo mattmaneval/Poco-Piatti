@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Link from 'next/link';
-import theme from '../styles/theme';
-import media from '../styles/media';
+import theme from '../../styles/theme';
+import media from '../../styles/media';
 const { color, fonts } = theme;
 
 const SecondaryCtaStyle = styled.a`

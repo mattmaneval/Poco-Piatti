@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 import Link from 'next/link';
-import media from '../styles/media';
-import theme from '../styles/theme';
+import media from '../../styles/media';
+import theme from '../../styles/theme';
 const { color, fonts } = theme;
 
 const PrimaryCtaStyle = styled.a`
   display: inline-block;
   padding: 1.15rem 3.65rem;
   background: ${color.foreground};
-  border-radius: 2em 2em 0 2em;
+  border-radius: 2em 2em 2em 0;
   color: ${color.background};
   font-family: ${fonts.heading};
   letter-spacing: 0.1em;

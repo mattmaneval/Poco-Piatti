@@ -1,13 +1,14 @@
 import styled from 'styled-components';
-import mixins from '../styles/mixins';
+import Image from 'next/image';
 import theme from '../styles/theme';
-const { color, space } = theme;
+const { color } = theme;
 
 const ThePocoExperienceStyle = styled.section`
   background-color: ${color.foreground};
 
   .wrap {
-    ${mixins.wrap}
+    max-width: 50em;
+    text-align: center;
   }
 
   h3 {

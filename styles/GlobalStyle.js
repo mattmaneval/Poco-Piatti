@@ -89,11 +89,16 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h5 {
-    font-family: ${fonts.font};
-    font-size: 1.1rem;
-    letter-spacing: 0.1em;
-    // text-transform: uppercase;
-    color: ${color.foregroundDim};
+    display: inline-block;
+    color: ${color.foreground};
+    font-family: ${fonts.title};
+    font-size: 1.65em;
+    margin-bottom: ${space.space};
+    text-transform: uppercase;
+
+    @media ${media.secondary} {
+      font-size: 2.25em;
+    }
   }
 
   p {
