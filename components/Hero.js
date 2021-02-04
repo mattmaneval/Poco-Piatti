@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import PrimaryCta from './navigation/PrimaryCta';
 import SecondaryCta from './navigation/SecondaryCta';
+import OrderModal from '../components/OrderModal';
 import mixins from '../styles/mixins';
 import media from '../styles/media';
 import theme from '../styles/theme';
@@ -31,7 +32,14 @@ const HeroStyles = styled.section`
   }
 `;
 
-const Hero = () => {
+function Hero() {
+
+  const [modal, openModal] = useState(false);
+
+  function handleClick() {
+    modal ? openModal(false) : openModal(true);
+  }
+
   return (
     <HeroStyles>
       <div className="wrap">
@@ -40,8 +48,8 @@ const Hero = () => {
           <h1>Toledo's Mediterranean Tapas Bar</h1>
           <p>Call 419-931-0281 for carryout and reservations.</p>
           <PrimaryCta
-            href="/"
             text="Order Online"
+            onClick={handleClick}
           />
           <SecondaryCta
             href="/"
@@ -49,6 +57,7 @@ const Hero = () => {
           />
         </div>
       </div>
+      <OrderModal modal={modal} onClick={handleClick}/>
     </HeroStyles>
   );
 }

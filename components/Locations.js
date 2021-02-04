@@ -4,6 +4,8 @@ import theme from '../styles/theme';
 const { color, space } = theme;
 
 const LocationsStyle = styled.section`
+  text-align: center;
+
   .locations-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -11,11 +13,8 @@ const LocationsStyle = styled.section`
 
     @media ${media.primary} {
       grid-template-columns: 1fr;
+      text-align: left;
     }
-  }
-
-  h3 {
-    margin-bottom: ${space.space};
   }
 
   .address {
@@ -37,7 +36,6 @@ const Locations = () => {
   return (
     <LocationsStyle>
       <div className="wrap">
-        <h5>Locations</h5>
         <div className="locations-container">
           <div className="location-container">
             <h3>Perrysburg</h3>

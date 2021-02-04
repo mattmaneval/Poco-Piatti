@@ -35,7 +35,7 @@ const ButtonStyle = styled.button`
       ${mixins.animate};
       content: "";
       position: absolute;
-      background-color: ${({ menu }) => menu ? `${color.foreground}` : `${color.foregroundDim}`};;
+      background-color: ${({ menu }) => menu ? `${color.foreground}` : `${color.foregroundDim}`};
       height: 0.15rem;
       width: 1.65rem;
       border-radius: 5em;

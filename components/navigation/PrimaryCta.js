@@ -4,7 +4,7 @@ import media from '../../styles/media';
 import theme from '../../styles/theme';
 const { color, fonts } = theme;
 
-const PrimaryCtaStyle = styled.a`
+const PrimaryCtaStyle = styled.button`
   display: inline-block;
   padding: 1.15rem 3.65rem;
   background: ${color.foreground};
@@ -13,6 +13,7 @@ const PrimaryCtaStyle = styled.a`
   font-family: ${fonts.heading};
   letter-spacing: 0.1em;
   font-size: 1.35rem;
+  cursor: pointer;
 
   @media ${media.secondary} {
     padding: 1.15rem 1.65rem;
@@ -20,11 +21,7 @@ const PrimaryCtaStyle = styled.a`
 `;
 
 const PrimaryCta = props => {
-  return (
-    <Link href={props.href} passHref>
-      <PrimaryCtaStyle>{props.text}</PrimaryCtaStyle>
-    </Link>
-  );
+  return <PrimaryCtaStyle onClick={props.onClick}>{props.text}</PrimaryCtaStyle>;
 }
 
 export default PrimaryCta;

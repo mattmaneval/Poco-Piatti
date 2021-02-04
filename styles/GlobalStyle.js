@@ -80,12 +80,8 @@ const GlobalStyle = createGlobalStyle`
   h4 {
     color: ${color.foreground};
     margin-bottom: ${space.halfSpace};
-    font-size: 3.65em;
+    font-size: 2.25em;
     font-family: ${fonts.subHeading};
-
-    @media ${media.secondary} {
-      font-size: 3em;
-    }
   }
 
   h5 {
