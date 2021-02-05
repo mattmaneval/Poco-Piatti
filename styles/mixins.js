@@ -42,7 +42,7 @@ const mixins = {
     width: 100%;
 
     @media ${media.secondary} {
-      padding: 3em 0;
+      /* padding: 3em 0; */
     }
   `,
 

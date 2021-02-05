@@ -4,8 +4,9 @@ import theme from '../../styles/theme';
 import media from '../../styles/media';
 const { color, fonts } = theme;
 
-const SecondaryCtaStyle = styled.a`
+const SecondaryCtaStyle = styled.button`
   display: inline-block;
+  background: none;
   font-family: ${fonts.heading};
   letter-spacing: 0.1em;
   font-size: 1.35rem;

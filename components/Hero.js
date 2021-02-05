@@ -11,6 +11,10 @@ const { color, space } = theme;
 
 const HeroStyles = styled.section`
   background-color: ${color.background};
+  /* background-image: url('/assets/images/beef_tips_1.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; */
 
   p {
     margin-bottom: 4rem;
@@ -45,7 +49,7 @@ function Hero() {
       <div className="wrap">
         <div className="hero-heading">
           <p>Welcome to Poco</p>
-          <h1>Toledo's Mediterranean Tapas Bar</h1>
+          <h1>Toledo's<br />Mediterranean<br />Tapas Bar</h1>
           <p>Call 419-931-0281 for carryout and reservations.</p>
           <PrimaryCta
             text="Order Online"

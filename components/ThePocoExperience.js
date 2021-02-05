@@ -4,15 +4,19 @@ import theme from '../styles/theme';
 const { color } = theme;
 
 const ThePocoExperienceStyle = styled.section`
-  background-color: ${color.foreground};
+  background-color: ${color.background};
 
   .wrap {
-    max-width: 50em;
-    text-align: center;
+    max-width: 40em;
+    text-align: left;
   }
 
   h3 {
-    color: ${color.background};
+    // color: ${color.background};
+  }
+
+  p {
+    color: ${color.foreground};
   }
 `;
 
