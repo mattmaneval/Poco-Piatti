@@ -120,20 +120,20 @@ const Footer = () => {
           <a href="mailto:pocopiattiparty@gmail.com">pocopiattiparty@gmail.com</a>
         </div>
         <nav>
-          <Link href="/about">
-            <a className="footer-link">Menu</a>
+        <Link href="/">
+          <a>Home</a>
+        </Link>
+          <Link href="/menu">
+            <a>Menu</a>
+          </Link>
+          <Link href="/catering">
+            <a>Catering</a>
+          </Link>
+          <Link href="/private-events">
+            <a>Private Events</a>
           </Link>
           <Link href="/about">
-            <a className="footer-link">Catering</a>
-          </Link>
-          <Link href="/about">
-            <a className="footer-link">Private Events</a>
-          </Link>
-          <Link href="/about">
-            <a className="footer-link">About</a>
-          </Link>
-          <Link href="/about">
-            <a className="footer-link">Contact</a>
+            <a>About</a>
           </Link>
         </nav>
         <div className="footer-socials">

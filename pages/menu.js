@@ -1,15 +1,6 @@
-import Head from 'next/head';
-import styled from 'styled-components';
-import { ThemeProvider } from 'styled-components';
-import { theme, GlobalStyle } from '../styles';
 import Header from '../components/Header';
-import Hero from '../components/Hero';
-import ThePocoExperience from '../components/ThePocoExperience';
-import Map from '../components/Map';
-import Locations from '../components/Locations';
-import Slider from '../components/Slider';
 import Footer from '../components/Footer';
-
+import Slider from '../components/Slider';
 
 const slideData = [
   {
@@ -42,22 +33,14 @@ const slideData = [
   }
 ]
 
-
-export default function Home() {
+const Menu = () => {
   return (
     <div>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <GlobalStyle />
       <Header />
-      <Hero />
       <Slider slides={slideData}/>
-      <ThePocoExperience />
-      <Locations />
-      <Map />
       <Footer />
     </div>
-  )
+  );
 }
+
+export default Menu;

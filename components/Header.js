@@ -64,20 +64,20 @@ function Header() {
           <Logo />
         </div>
         <nav>
-          <Link href="/about">
+        <Link href="/">
+          <a>Home</a>
+        </Link>
+          <Link href="/menu">
             <a>Menu</a>
           </Link>
-          <Link href="/about">
+          <Link href="/catering">
             <a>Catering</a>
           </Link>
-          <Link href="/about">
+          <Link href="/private-events">
             <a>Private Events</a>
           </Link>
           <Link href="/about">
             <a>About</a>
-          </Link>
-          <Link href="/about">
-            <a>Contact</a>
           </Link>
         </nav>
         <MenuButton menu={menu} onClick={handleClick} />

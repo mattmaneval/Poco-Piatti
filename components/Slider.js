@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import Link from 'next/link';
 import mixins from '../styles/mixins';
 
 const SliderStyles = styled.section`
   ${mixins.wrap}
   padding: 6em 0;
 
-  
+
 `;
 // =========================
 // Slide
@@ -46,7 +47,7 @@ class Slide extends React.Component {
   }
 
   render() {
-    const { src, button, headline, index } = this.props.slide;
+    const { src, button, headline, index, href } = this.props.slide;
     const current = this.props.current;
     let classNames = 'slide';
 
@@ -55,27 +56,30 @@ class Slide extends React.Component {
     else if (current + 1 === index) classNames += ' slide--next';
 
     return (
-      <li
-        ref={this.slide}
-        className={classNames}
-        onClick={this.handleSlideClick}
-        onMouseMove={this.handleMouseMove}
-        onMouseLeave={this.handleMouseLeave}
-      >
-        <div className="slide__image-wrapper">
-          <img
-            className="slide__image"
-            alt={headline}
-            src={src}
-            onLoad={this.imageLoaded}
-          />
-        </div>
+      <Link href={href}>
+        <li
+          ref={this.slide}
+          className={classNames}
+          onClick={this.handleSlideClick}
+          onMouseMove={this.handleMouseMove}
+          onMouseLeave={this.handleMouseLeave}
+        >
 
-        <article className="slide__content">
-          <h2 className="slide__headline">{headline}</h2>
-          {/* <button className="slide__action btn">{button}</button> */}
-        </article>
-      </li>
+          <div className="slide__image-wrapper">
+            <img
+              className="slide__image"
+              alt={headline}
+              src={src}
+              onLoad={this.imageLoaded}
+            />
+          </div>
+
+          <article className="slide__content">
+            <h2 className="slide__headline">{headline}</h2>
+            {/* <button className="slide__action btn">{button}</button> */}
+          </article>
+        </li>
+      </Link>
     )
   }
 }
