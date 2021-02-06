@@ -1,13 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
-import { css } from 'styled-components';
-import Image from 'next/image';
+import styled, { css } from 'styled-components';
 import Link from 'next/link';
 import Facebook from './icons/Facebook';
 import Instagram from './icons/Instagram';
 import mixins from '../styles/mixins';
 import theme from '../styles/theme';
 import media from '../styles/media';
+
 const { color, fonts, space } = theme;
 
 const footerLink = {
@@ -18,7 +17,7 @@ const footerLink = {
       color: ${color.backgroundTert};
     }
   `,
-}
+};
 
 const FooterStyles = styled.footer`
   ${mixins.section};
@@ -110,43 +109,48 @@ const FooterStyles = styled.footer`
 
 const year = new Date().getFullYear();
 
-const Footer = () => {
-  return (
-    <FooterStyles>
-      <div className="wrap">
-        <div className="footer-contact">
-          <h3>Poco Piatti</h3>
-          <a href="tel:419-931-0281">419-931-0281</a>
-          <a href="mailto:pocopiattiparty@gmail.com">pocopiattiparty@gmail.com</a>
-        </div>
-        <nav>
+const Footer = () => (
+  <FooterStyles>
+    <div className="wrap">
+      <div className="footer-contact">
+        <h3>Poco Piatti</h3>
+        <a href="tel:419-931-0281">419-931-0281</a>
+        <a href="mailto:pocopiattiparty@gmail.com">pocopiattiparty@gmail.com</a>
+      </div>
+      <nav>
         <Link href="/">
           <a>Home</a>
         </Link>
-          <Link href="/menu">
-            <a>Menu</a>
-          </Link>
-          <Link href="/catering">
-            <a>Catering</a>
-          </Link>
-          <Link href="/private-events">
-            <a>Private Events</a>
-          </Link>
-          <Link href="/about">
-            <a>About</a>
-          </Link>
-        </nav>
-        <div className="footer-socials">
-          <Facebook />
-          <Instagram />
-        </div>
+        <Link href="/menu">
+          <a>Menu</a>
+        </Link>
+        <Link href="/catering">
+          <a>Catering</a>
+        </Link>
+        <Link href="/private-events">
+          <a>Private Events</a>
+        </Link>
+        <Link href="/about">
+          <a>About</a>
+        </Link>
+      </nav>
+      <div className="footer-socials">
+        <Facebook />
+        <Instagram />
       </div>
-      <div className="copyright">
-        Copyright &#169; {year} Poco Piatti All Rights Reserved.
-        Site by <a href="https://mattmaneval.com/">Matt Maneval</a>.
-      </div>
-    </FooterStyles>
-  );
-}
+    </div>
+    <div className="copyright">
+      Copyright &#169;
+      {' '}
+      {year}
+      {' '}
+      Poco Piatti All Rights Reserved.
+      Site by
+      {' '}
+      <a href="https://mattmaneval.com/">Matt Maneval</a>
+      .
+    </div>
+  </FooterStyles>
+);
 
 export default Footer;

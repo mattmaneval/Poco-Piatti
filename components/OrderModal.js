@@ -1,10 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import media from '../styles/media';
 import mixins from '../styles/mixins';
-import PrimaryCta from './navigation/PrimaryCta';
-import SecondaryCta from './navigation/SecondaryCta';
 import theme from '../styles/theme';
+
 const { color, space, fonts } = theme;
 
 const OrderModalStyle = styled.div`
@@ -17,7 +17,7 @@ const OrderModalStyle = styled.div`
   right: 0;
   bottom: 0;
   z-index: 4;
-  display: ${({ modal }) => modal ? 'block' : 'none'};
+  display: ${({ modal }) => (modal ? 'block' : 'none')};
 
   .order-modal-container {
     ${mixins.wrap}
@@ -96,31 +96,38 @@ const GoBack = styled.button`
   top: 1.75em;
   right: 1.75em
 `;
-const OrderModal = props => {
-  return (
-    <OrderModalStyle
-      modal={props.modal}>
-      <div className="order-modal-container">
-        <div className="order-modal-container-content">
-          <p>Choose your location for online ordering.</p>
-          <p>Or call <a href="tel:4199310281">419-931-0281</a> for any location.</p>
-        </div>
-        <div className="order-modal-container-links">
-          <LocationButton
-            href="https://www.toasttab.com/poco-piatti-perrysburg-3155-chapel-drive/v3/?mode=fulfillment"
-            >
-            Perrysburg
-          </LocationButton>
-          <LocationButton
-            href="https://www.toasttab.com/poco-piatti-toledo-6710-w-central-ave-1/v3/?mode=fulfillment"
-            >
-            Sylvania
-          </LocationButton>
-          <GoBack onClick={props.onClick}>Go Back</GoBack>
-        </div>
+const OrderModal = ({ modal, onClick }) => (
+  <OrderModalStyle modal={modal}>
+    <div className="order-modal-container">
+      <div className="order-modal-container-content">
+        <p>Choose your location for online ordering.</p>
+        <p>
+          Or call
+          <a href="tel:4199310281">419-931-0281</a>
+          {' '}
+          for any location.
+        </p>
       </div>
-    </OrderModalStyle>
-  );
-}
+      <div className="order-modal-container-links">
+        <LocationButton
+          href="https://www.toasttab.com/poco-piatti-perrysburg-3155-chapel-drive/v3/?mode=fulfillment"
+        >
+          Perrysburg
+        </LocationButton>
+        <LocationButton
+          href="https://www.toasttab.com/poco-piatti-toledo-6710-w-central-ave-1/v3/?mode=fulfillment"
+        >
+          Sylvania
+        </LocationButton>
+        <GoBack onClick={onClick}>Go Back</GoBack>
+      </div>
+    </div>
+  </OrderModalStyle>
+);
+
+OrderModal.propTypes = {
+  modal: PropTypes.bool.isRequired,
+  onClick: PropTypes.func.isRequired,
+};
 
 export default OrderModal;

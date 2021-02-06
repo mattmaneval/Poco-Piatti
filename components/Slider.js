@@ -6,8 +6,6 @@ import mixins from '../styles/mixins';
 const SliderStyles = styled.section`
   ${mixins.wrap}
   padding: 6em 0;
-
-
 `;
 // =========================
 // Slide
@@ -15,7 +13,7 @@ const SliderStyles = styled.section`
 
 class Slide extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     // this.handleMouseMove = this.handleMouseMove.bind(this);
     // this.handleMouseLeave = this.handleMouseLeave.bind(this);
@@ -47,8 +45,10 @@ class Slide extends React.Component {
   }
 
   render() {
-    const { src, button, headline, index, href } = this.props.slide;
-    const current = this.props.current;
+    const {
+      src, button, headline, index, href,
+    } = this.props.slide;
+    const { current } = this.props;
     let classNames = 'slide';
 
     if (current === index) classNames += ' slide--current';
@@ -80,25 +80,21 @@ class Slide extends React.Component {
           </article>
         </li>
       </Link>
-    )
+    );
   }
 }
-
 
 // =========================
 // Slider control
 // =========================
 
-const SliderControl = ({ type, title, handleClick }) => {
-  return (
-    <button className={`btn btn--${type}`} title={title} onClick={handleClick}>
-      <svg className="icon" viewBox="0 0 24 24">
-        <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-      </svg>
-    </button>
-  )
-}
-
+const SliderControl = ({ type, title, handleClick }) => (
+  <button className={`btn btn--${type}`} title={title} onClick={handleClick}>
+    <svg className="icon" viewBox="0 0 24 24">
+      <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+    </svg>
+  </button>
+);
 
 // =========================
 // Slider
@@ -106,7 +102,7 @@ const SliderControl = ({ type, title, handleClick }) => {
 
 class Slider extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = { current: 1 };
     this.handlePreviousClick = this.handlePreviousClick.bind(this);
@@ -120,8 +116,8 @@ class Slider extends React.Component {
     this.setState({
       current: (previous < 0)
         ? this.props.slides.length - 1
-        : previous
-    })
+        : previous,
+    });
   }
 
   handleNextClick() {
@@ -130,14 +126,14 @@ class Slider extends React.Component {
     this.setState({
       current: (next === this.props.slides.length)
         ? 0
-        : next
+        : next,
     });
   }
 
   handleSlideClick(index) {
     if (this.state.current !== index) {
       this.setState({
-        current: index
+        current: index,
       });
     }
   }
@@ -146,44 +142,41 @@ class Slider extends React.Component {
     const { current, direction } = this.state;
     const { slides, heading } = this.props;
     const wrapperTransform = {
-      'transform': `translateX(-${current * (100 / slides.length)}%)`
-    }
+      transform: `translateX(-${current * (100 / slides.length)}%)`,
+    };
 
     return (
       <SliderStyles>
-      <div className='slider'>
-        <ul className="slider__wrapper" style={wrapperTransform}>
+        <div className="slider">
+          <ul className="slider__wrapper" style={wrapperTransform}>
 
-          {slides.map(slide => {
-            return (
+            {slides.map((slide) => (
               <Slide
                 key={slide.index}
                 slide={slide}
                 current={current}
                 handleSlideClick={this.handleSlideClick}
               />
-            )
-          })}
-        </ul>
+            ))}
+          </ul>
 
-        <div className="slider__controls">
-          <SliderControl
-            type="previous"
-            title="Go to previous slide"
-            handleClick={this.handlePreviousClick}
-          />
+          <div className="slider__controls">
+            <SliderControl
+              type="previous"
+              title="Go to previous slide"
+              handleClick={this.handlePreviousClick}
+            />
 
-          <SliderControl
-            type="next"
-            title="Go to next slide"
-            handleClick={this.handleNextClick}
-          />
+            <SliderControl
+              type="next"
+              title="Go to next slide"
+              handleClick={this.handleNextClick}
+            />
+          </div>
         </div>
-      </div>
       </SliderStyles>
-    )
+    );
   }
 }
-
 
 export default Slider;

@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
-import Image from 'next/image';
 import Link from 'next/link';
 import Logo from './icons/Logo';
 import MenuButton from './navigation/MenuButton';
@@ -8,6 +7,7 @@ import MobileMenu from './navigation/MobileMenu';
 import mixins from '../styles/mixins';
 import media from '../styles/media';
 import theme from '../styles/theme';
+
 const { color, fonts, space } = theme;
 
 const HeaderStyles = styled.header`
@@ -50,12 +50,9 @@ const HeaderStyles = styled.header`
 `;
 
 function Header() {
-
   const [menu, active] = useState(false);
 
-  function handleClick() {
-    menu ? active(false) : active(true);
-  }
+  const handleClick = () => (menu ? active(false) : active(true));
 
   return (
     <HeaderStyles menu={menu}>
@@ -64,9 +61,9 @@ function Header() {
           <Logo />
         </div>
         <nav>
-        <Link href="/">
-          <a>Home</a>
-        </Link>
+          <Link href="/">
+            <a>Home</a>
+          </Link>
           <Link href="/menu">
             <a>Menu</a>
           </Link>

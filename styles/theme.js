@@ -14,7 +14,7 @@ const theme = {
     gap: '2rem',
   },
 
-  //Color
+  // Color
   color: {
     background: '#171717',
     backgroundAlt: '',
@@ -31,6 +31,6 @@ const theme = {
     heading: 'ostrich sansheavy',
     subHeading: 'eb garamondregular',
   },
-}
+};
 
 export default theme;

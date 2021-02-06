@@ -1,5 +1,6 @@
 import { css } from 'styled-components';
 import theme from './theme';
+
 const { color } = theme;
 
 const Resets = css`

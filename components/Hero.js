@@ -1,20 +1,15 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Link from 'next/link';
 import PrimaryCta from './navigation/PrimaryCta';
 import SecondaryCta from './navigation/SecondaryCta';
-import OrderModal from '../components/OrderModal';
-import mixins from '../styles/mixins';
+import OrderModal from './OrderModal';
 import media from '../styles/media';
 import theme from '../styles/theme';
-const { color, space } = theme;
+
+const { color } = theme;
 
 const HeroStyles = styled.section`
   background-color: ${color.background};
-  /* background-image: url('/assets/images/beef_tips_1.jpeg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center; */
 
   p {
     margin-bottom: 4rem;
@@ -37,19 +32,22 @@ const HeroStyles = styled.section`
 `;
 
 function Hero() {
-
   const [modal, openModal] = useState(false);
 
-  function handleClick() {
-    modal ? openModal(false) : openModal(true);
-  }
+  const handleClick = () => (modal ? openModal(false) : openModal(true));
 
   return (
     <HeroStyles>
       <div className="wrap">
         <div className="hero-heading">
           <p>Welcome to Poco</p>
-          <h1>Toledo's<br />Mediterranean<br />Tapas Bar</h1>
+          <h1>
+            Toledo&apos;s
+            <br />
+            Mediterranean
+            <br />
+            Tapas Bar
+          </h1>
           <p>Call 419-931-0281 for carryout and reservations.</p>
           <PrimaryCta
             text="Order Online"
@@ -61,7 +59,7 @@ function Hero() {
           />
         </div>
       </div>
-      <OrderModal modal={modal} onClick={handleClick}/>
+      <OrderModal modal={modal} onClick={handleClick} />
     </HeroStyles>
   );
 }

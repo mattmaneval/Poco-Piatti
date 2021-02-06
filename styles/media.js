@@ -2,8 +2,8 @@ const size = {
   tablet: '1024px',
   bigPhone: '840px',
   phone: '767px',
-  smallPhone: '480px'
-}
+  smallPhone: '480px',
+};
 
 const media = {
   primary: `(max-width: ${size.tablet})`,

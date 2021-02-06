@@ -1,7 +1,9 @@
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Link from 'next/link';
 import theme from '../../styles/theme';
 import media from '../../styles/media';
+
 const { color, fonts } = theme;
 
 const SecondaryCtaStyle = styled.button`
@@ -29,12 +31,15 @@ const SecondaryCtaStyle = styled.button`
   }
 `;
 
-const SecondaryCta = props => {
-  return (
-    <Link href={props.href} passHref>
-      <SecondaryCtaStyle>{props.text}</SecondaryCtaStyle>
-    </Link>
-  );
-}
+const SecondaryCta = ({ href, text }) => (
+  <Link href={href} passHref>
+    <SecondaryCtaStyle>{text}</SecondaryCtaStyle>
+  </Link>
+);
+
+SecondaryCta.propTypes = {
+  href: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+};
 
 export default SecondaryCta;

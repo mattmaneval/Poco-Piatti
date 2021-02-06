@@ -1,6 +1,7 @@
 import { css } from 'styled-components';
-import media from './media'
+import media from './media';
 import theme from './theme';
+
 const { color, responsive } = theme;
 
 const mixins = {
