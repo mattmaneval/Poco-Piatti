@@ -15,7 +15,7 @@ const FullMenuStyles = styled.section`
   background-color: ${color.foreground};
 
   .wrap {
-    /* max-width: 20em; */
+    max-width: 20em;
   }
 `;
 

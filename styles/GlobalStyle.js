@@ -26,6 +26,7 @@ const GlobalStyle = createGlobalStyle`
   html,
   body {
     background-color: ${color.background};
+    font-family: ${fonts.font};
     overflow-x: hidden;
   }
 
