@@ -9,11 +9,21 @@ import theme from '../styles/theme';
 const { color } = theme;
 
 const HeroStyles = styled.section`
-  background-color: ${color.background};
+  /* background-color: ${color.foreground}; */
+  background-image: url('/assets/images/small-plates.jpeg');
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .hero-heading {
+    position: relative;
+  }
 
   p {
     margin-bottom: 4rem;
-    color: ${color.foregroundDim};
+    color: ${color.background};
     font-size: 1.35em;
 
     &:first-of-type {
@@ -54,7 +64,7 @@ function Hero() {
             onClick={handleClick}
           />
           <SecondaryCta
-            href="/"
+            href="/menu"
             text="See Menu"
           />
         </div>
@@ -65,3 +75,9 @@ function Hero() {
 }
 
 export default Hero;
+
+// <iframe src="https://player.vimeo.com/video/325445778" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+// <video playsInline autoPlay muted loop id="bgvid">
+//   <source src="https://pocopiatti.s3.us-east-2.amazonaws.com/background-video.mp4" type="video/mp4" />
+//   <source src="https://pocopiatti.s3.us-east-2.amazonaws.com/background-video.mp4" type="video/mmp4" />
+// </video>

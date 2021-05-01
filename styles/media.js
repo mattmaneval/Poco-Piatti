@@ -14,7 +14,7 @@ const media = {
 
 export default media;
 
-// Media Query Manifest
+// // Media Query Manifest
 
 // @media ${media.primary} {}
 

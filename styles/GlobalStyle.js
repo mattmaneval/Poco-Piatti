@@ -59,7 +59,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     @media ${media.secondary} {
-      font-size: 3em;
+      font-size: 4em;
     }
   }
 
@@ -84,7 +84,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h4 {
-    color: ${color.background};
+    color: ${color.foreground};
     margin-bottom: ${space.halfSpace};
     font-size: 2.25em;
     font-family: ${fonts.heading};
@@ -105,7 +105,7 @@ const GlobalStyle = createGlobalStyle`
 
   p {
     font-family: ${fonts.font};
-    color: ${color.background};
+    color: ${color.foreground};
     line-height: 140%;
     font-size: 1.25em;
 

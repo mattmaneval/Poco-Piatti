@@ -16,6 +16,14 @@ const Fonts = css`
       font-weight: normal;
       font-style: normal;
   };
+
+  @font-face {
+    font-family: 'LeagueSpartan-Bold';
+    src: url('assets/fonts/LeagueSpartan-Bold.woff2') format('woff2'),
+         url('assets/fonts/LeagueSpartan-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 `;
 
 export default Fonts;

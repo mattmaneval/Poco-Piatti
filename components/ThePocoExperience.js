@@ -16,7 +16,7 @@ const ThePocoExperienceStyle = styled.section`
   }
 
   p {
-    color: ${color.foreground};
+    color: ${color.foregroundDim};
   }
 `;
 

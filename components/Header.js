@@ -12,6 +12,9 @@ const { color, fonts, space } = theme;
 
 const HeaderStyles = styled.header`
   padding: 3rem 0;
+  /* position: absolute; */
+  width: 100%;
+  z-index: 10;
 
   .wrap {
     ${mixins.flexBetween};
@@ -20,6 +23,7 @@ const HeaderStyles = styled.header`
   .header-logo {
     transform: translateX(-1em);
     width: 12em;
+
 
     @media ${media.primary} {
       width: 8em;

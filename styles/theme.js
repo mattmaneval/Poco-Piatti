@@ -16,7 +16,8 @@ const theme = {
 
   // Color
   color: {
-    background: '#171717',
+    background: '#000000',
+    // background: '#171717',
     backgroundAlt: '',
     backgroundTert: '#bf5252',
     foreground: '#ffffff',
@@ -27,6 +28,7 @@ const theme = {
   // Fonts
   fonts: {
     font: 'eb garamondregular',
+    fontBold: 'LeagueSpartan-Bold',
     title: 'ostrich sansheavy',
     heading: 'ostrich sansheavy',
     subHeading: 'eb garamondregular',
