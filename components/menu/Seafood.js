@@ -32,6 +32,10 @@ const seafoodData = [
       small: 7,
       large: 13,
     },
+    dietary: {
+      type: 'gluten-free',
+      title: 'Gluten Free',
+    },
   },
   {
     name: 'Thai Shrimp \'Lasagna\'',
@@ -55,6 +59,10 @@ const seafoodData = [
     price: {
       small: 10,
       large: 18,
+    },
+    dietary: {
+      type: 'gluten-free',
+      title: 'Gluten Free',
     },
   },
 ];

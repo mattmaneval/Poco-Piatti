@@ -16,6 +16,10 @@ const saladsData = [
       small: 6,
       large: 11,
     },
+    dietary: {
+      type: 'gluten-free',
+      title: 'Gluten Free',
+    },
   },
   {
     name: 'Fatoosh',
@@ -48,6 +52,10 @@ const saladsData = [
       small: 7,
       large: 12,
     },
+    dietary: {
+      type: 'gluten-free',
+      title: 'Gluten Free',
+    },
   },
   {
     name: 'Poco House Salad',
@@ -56,6 +64,10 @@ const saladsData = [
       small: 5,
       large: 9,
     },
+    dietary: {
+      type: 'gluten-free',
+      title: 'Gluten Free',
+    },
   },
   {
     name: 'Roasted Beet Salad',
@@ -63,6 +75,10 @@ const saladsData = [
     price: {
       small: 7,
       large: 12,
+    },
+    dietary: {
+      type: 'gluten-free',
+      title: 'Gluten Free',
     },
   },
 ];

@@ -16,11 +16,11 @@ const theme = {
 
   // Color
   color: {
-    background: '#000000',
+    background: '#ffffff',
     // background: '#171717',
     backgroundAlt: '',
     backgroundTert: '#bf5252',
-    foreground: '#ffffff',
+    foreground: '#000000',
     callout: '#3b5998',
     foregroundDim: '#8f9296',
   },

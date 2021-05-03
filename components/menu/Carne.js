@@ -16,11 +16,19 @@ const carneData = [
       small: 9,
       large: 17,
     },
+    dietary: {
+      type: 'gluten-free',
+      title: 'Gluten Free',
+    },
   },
   {
     name: 'Grilled Baby Lamb Chops',
     desc: 'Marinated in balsamic, fresh herbs and garlic, grilled to perfection.',
     price: 15,
+    dietary: {
+      type: 'gluten-free',
+      title: 'Gluten Free',
+    },
   },
   {
     name: 'Ara-yes Halabi',
@@ -47,6 +55,10 @@ const carneData = [
       small: 6,
       large: 11,
     },
+    dietary: {
+      type: 'gluten-free',
+      title: 'Gluten Free',
+    },
   },
   {
     name: 'Eggplant Rolotini',
@@ -67,6 +79,10 @@ const carneData = [
     price: {
       small: 5,
       large: 9,
+    },
+    dietary: {
+      type: 'gluten-free',
+      title: 'Gluten Free',
     },
   },
   {
@@ -89,12 +105,16 @@ const carneData = [
     name: 'Chorizo and Beans',
     desc: 'Chorizo with white beans in a spicy tomato sauce.',
     price: 8,
+    dietary: {
+      type: 'gluten-free',
+      title: 'Gluten Free',
+    },
   },
 ];
 
 const Carne = () => (
   <CarneStyles>
-    <h4>Vegetarian</h4>
+    <h4>Carne</h4>
     {Object.keys(carneData).map((key) => (
       <FoodItem data={carneData[key]} />
     ))}

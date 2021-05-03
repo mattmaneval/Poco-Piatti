@@ -16,6 +16,11 @@ const vegetarianData = [
       small: 5,
       large: 8,
     },
+    dietary: {
+      type: 'gluten-free',
+      title: 'Gluten Free Option',
+      subtitle: 'Ask your server for fresh veggies.',
+    },
   },
   {
     name: 'Roasted Garlic Feta Dip',
@@ -24,6 +29,11 @@ const vegetarianData = [
       small: 6,
       large: 9,
     },
+    dietary: {
+      type: 'gluten-free',
+      title: 'Gluten Free Option',
+      subtitle: 'Ask your server for fresh veggies.',
+    },
   },
   {
     name: 'Lebanee',
@@ -31,6 +41,11 @@ const vegetarianData = [
     price: {
       small: 5,
       large: 8,
+    },
+    dietary: {
+      type: 'gluten-free',
+      title: 'Gluten Free Option',
+      subtitle: 'Ask your server for fresh veggies.',
     },
   },
   {
@@ -41,6 +56,10 @@ const vegetarianData = [
   {
     name: 'Sauteed Mushrooms ',
     price: 9,
+    dietary: {
+      type: 'gluten-free',
+      title: 'Gluten Free',
+    },
   },
   {
     name: 'Mujadra',
@@ -54,6 +73,10 @@ const vegetarianData = [
     name: 'Lubia Bi Zeit',
     desc: 'Sauteed green beans with garlic and onions in a tomato sauce.',
     price: 8,
+    dietary: {
+      type: 'gluten-free',
+      title: 'Gluten Free',
+    },
   },
   {
     name: 'Veggie Grape Leaves',
@@ -61,6 +84,10 @@ const vegetarianData = [
     price: {
       small: 5,
       large: 9,
+    },
+    dietary: {
+      type: 'gluten-free',
+      title: 'Gluten Free',
     },
   },
   {
@@ -70,6 +97,10 @@ const vegetarianData = [
       small: 6,
       large: 10,
     },
+    dietary: {
+      type: 'gluten-free',
+      title: 'Gluten Free',
+    },
   },
   {
     name: 'Roasted Cauliflower',
@@ -78,6 +109,10 @@ const vegetarianData = [
       small: 5,
       large: 9,
     },
+    dietary: {
+      type: 'gluten-free',
+      title: 'Gluten Free',
+    },
   },
   {
     name: 'Stuffed Portabella Caps',
@@ -85,6 +120,10 @@ const vegetarianData = [
     price: {
       small: 7,
       large: 12,
+    },
+    dietary: {
+      type: 'gluten-free',
+      title: 'Gluten Free',
     },
   },
 ];
