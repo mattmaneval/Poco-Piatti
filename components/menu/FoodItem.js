@@ -8,14 +8,18 @@ const { fonts, space, color } = theme;
 
 const FoodItemStyles = styled.div`
   font-family: ${fonts.font};
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
 
   .food-item-name {
     ${mixins.flexBetween};
     margin-bottom: ${space.quarterSpace};
     color: ${color.foreground};
     font-weight: bold;
-    font-size: 2.25em;
+    font-size: 1.85em;
+
+    /* div:last-of-type {
+      font-size: 1.5rem;
+    } */
   }
 
   .food-item-desc {
@@ -30,7 +34,7 @@ const FoodItemStyles = styled.div`
     color: ${color.foreground};
     text-transform: uppercase;
     font-family: ${fonts.fontBold};
-    letter-spacing: 0.3em;
+    letter-spacing: 0.25em;
     font-size: 0.8em;
 
     svg {
@@ -57,17 +61,24 @@ const FoodItem = ({ data }) => (
       </div>
     </div>
     <div className="food-item-desc">{data.desc ? data.desc : null }</div>
-    <div className="food-item-options">
-      {data.dietary ? <GlutenFree /> : null }
-      {data.dietary
-        ? `${data.dietary.title}`
-        : null }
-    </div>
-    <div className="food-item-desc">
-      {data.dietary && data.dietary.subtitle
-        ? `${data.dietary.subtitle}`
-        : null }
-    </div>
+    {data.dietary
+      ? (
+        <div className="food-item-options">
+          <GlutenFree />
+          {data.dietary
+            ? `${data.dietary.title}`
+            : null }
+        </div>
+      )
+      : null }
+
+    {data.dietary && data.dietary.subtitle
+      ? (
+        <div className="food-item-desc">
+          {data.dietary.subtitle}
+        </div>
+      )
+      : null }
   </FoodItemStyles>
 );
 

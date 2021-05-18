@@ -2,6 +2,7 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import Logo from './icons/Logo';
+import GlobalHeader from './GlobalHeader';
 import MenuButton from './navigation/MenuButton';
 import MobileMenu from './navigation/MobileMenu';
 import mixins from '../styles/mixins';
@@ -28,6 +29,10 @@ const HeaderStyles = styled.header`
     @media ${media.primary} {
       width: 8em;
     }
+  }
+
+  .header-links {
+
   }
 
   nav {
@@ -64,24 +69,27 @@ function Header() {
         <div className="header-logo">
           <Logo />
         </div>
-        <nav>
-          <Link href="/">
-            <a>Home</a>
-          </Link>
-          <Link href="/menu">
-            <a>Menu</a>
-          </Link>
-          <Link href="/catering">
-            <a>Catering</a>
-          </Link>
-          <Link href="/private-events">
-            <a>Private Events</a>
-          </Link>
-          <Link href="/about">
-            <a>About</a>
-          </Link>
-        </nav>
-        <MenuButton menu={menu} onClick={handleClick} />
+        <div className="header-links">
+          <GlobalHeader />
+          <nav>
+            <Link href="/">
+              <a>Home</a>
+            </Link>
+            <Link href="/menu">
+              <a>Menu</a>
+            </Link>
+            <Link href="/catering">
+              <a>Catering</a>
+            </Link>
+            <Link href="/private-events">
+              <a>Private Events</a>
+            </Link>
+            <Link href="/about">
+              <a>About</a>
+            </Link>
+          </nav>
+          <MenuButton menu={menu} onClick={handleClick} />
+        </div>
       </div>
       <MobileMenu menu={menu} />
     </HeaderStyles>

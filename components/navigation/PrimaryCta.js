@@ -9,7 +9,7 @@ const PrimaryCtaStyle = styled.button`
   display: inline-block;
   padding: 1.15rem 3.65rem;
   background: ${color.foreground};
-  border-radius: 2em 2em 2em 0;
+  /* border-radius: 2em 2em 2em 0; */
   color: ${color.background};
   font-family: ${fonts.heading};
   letter-spacing: 0.1em;

@@ -85,8 +85,8 @@ const GlobalStyle = createGlobalStyle`
 
   h4 {
     color: ${color.foreground};
-    margin-bottom: ${space.halfSpace};
-    font-size: 2.25em;
+    margin-bottom: 3rem;
+    font-size: 5.25em;
     font-family: ${fonts.heading};
   }
 
@@ -123,6 +123,10 @@ const GlobalStyle = createGlobalStyle`
 
   .wrap {
     ${mixins.wrap}
+  }
+
+  .collapsed {
+    display: none;
   }
 `;
 

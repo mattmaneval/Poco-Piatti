@@ -39,7 +39,7 @@ const OrderModalStyle = styled.div`
       display: flex;
       justify-content: center;
       flex-direction: column;
-      background-color: ${color.background};
+      background-color: ${color.foreground};
       padding: ${space.space};
       min-height: 20em;
     }
@@ -71,7 +71,7 @@ const LocationButton = styled.a`
   font-family: ${fonts.heading};
   letter-spacing: 0.1em;
   font-size: 1.65rem;
-  color: ${color.foreground};
+  color: ${color.background};
   padding: 1.15rem 2rem;
   width: 100%;
   background-color: ${color.backgroundTert};

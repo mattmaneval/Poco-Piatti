@@ -27,7 +27,7 @@ const ButtonStyle = styled.button`
 
   span {
     display: inline-block;
-    background-color: ${color.background};
+    background-color: ${color.foreground};
     border-radius: 5em;
     position: relative;
 
@@ -36,7 +36,7 @@ const ButtonStyle = styled.button`
       ${mixins.animate};
       content: "";
       position: absolute;
-      background-color: ${color.background};
+      background-color: ${color.foreground};
       height: 0.12rem;
       width: 1.65rem;
       border-radius: 5em;
@@ -46,14 +46,14 @@ const ButtonStyle = styled.button`
       top: ${({ menu }) => (menu ? '0' : '-6px')};;
       left: 0;
       transform: ${({ menu }) => (menu ? 'rotate(45deg)' : 'rotate(0)')};
-      background-color: ${({ menu }) => (menu ? `${color.foreground}` : `${color.background}`)};
+      background-color: ${({ menu }) => (menu ? `${color.foreground}` : `${color.foreground}`)};
     }
 
     &:after {
       top: ${({ menu }) => (menu ? '0' : '6px')};
       left: 0;
       transform: ${({ menu }) => (menu ? 'rotate(-45deg)' : 'rotate(0)')};
-      background-color: ${({ menu }) => (menu ? `${color.foreground}` : `${color.background}`)};
+      background-color: ${({ menu }) => (menu ? `${color.foreground}` : `${color.foreground}`)};
     }
   }
 `;

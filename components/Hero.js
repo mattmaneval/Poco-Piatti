@@ -4,40 +4,36 @@ import PrimaryCta from './navigation/PrimaryCta';
 import SecondaryCta from './navigation/SecondaryCta';
 import OrderModal from './OrderModal';
 import media from '../styles/media';
+import mixins from '../styles/mixins';
 import theme from '../styles/theme';
 
-const { color } = theme;
+const { color, space } = theme;
 
 const HeroStyles = styled.section`
-  /* background-color: ${color.foreground}; */
-  background-image: url('/assets/images/small-plates.jpeg');
-  background-size: cover;
-  height: 100vh;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
 
-  .hero-heading {
-    position: relative;
+  .header-ctas {
+    margin-bottom: ${space.space};
   }
+`;
 
-  p {
-    margin-bottom: 4rem;
-    color: ${color.background};
-    font-size: 1.35em;
+const HeroImage = styled.div`
+  position: relative;
+  display: inline-block;
+  background-image: url('/assets/images/small-plates.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 0;
+  width: 64em;
+  padding-top: 75%;
 
-    &:first-of-type {
-      font-size: 2.65em;
-      margin-bottom: 1.25rem;
-
-      @media ${media.primary} {
-        font-size: 1.85rem;
-      }
-    }
-  }
-
-  h3 {
-    color: ${color.background};
+  @media ${media.primary} {
+    width: 100%;
+    padding-top: 100%;
   }
 `;
 
@@ -48,29 +44,41 @@ function Hero() {
 
   return (
     <HeroStyles>
-      <div className="wrap">
-        <div className="hero-heading">
-          <p>Welcome to Poco</p>
-          <h1>
-            Toledo&apos;s
-            <br />
-            Mediterranean
-            <br />
-            Tapas Bar
-          </h1>
-          <p>Call 419-931-0281 for carryout and reservations.</p>
-          <PrimaryCta
-            text="Order Online"
-            onClick={handleClick}
-          />
-          <SecondaryCta
-            href="/menu"
-            text="See Menu"
-          />
-        </div>
+      <div className="header-ctas">
+        <PrimaryCta
+          text="Order Now"
+          onClick={handleClick}
+        />
+        <SecondaryCta
+          href="/menu"
+          text="See Menu"
+        />
       </div>
+      <HeroImage />
       <OrderModal modal={modal} onClick={handleClick} />
     </HeroStyles>
+      // <div className="wrap">
+      //   <div className="hero-heading">
+      //     <h1>
+      //       Toledo&apos;s
+      //       <br />
+      //       Mediterranean
+      //       <br />
+      //       Tapas Bar
+      //     </h1>
+      //     <p>Call 419-931-0281 for carryout and reservations.</p>
+      //     <PrimaryCta
+      //       text="Order Online"
+      //       onClick={handleClick}
+      //     />
+      //     <SecondaryCta
+      //       href="/menu"
+      //       text="See Menu"
+      //     />
+      //   </div>
+      // </div>
+      // <OrderModal modal={modal} onClick={handleClick} />
+    // </HeroStyles>
   );
 }
 

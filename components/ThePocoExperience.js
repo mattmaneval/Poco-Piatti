@@ -5,6 +5,7 @@ const { color } = theme;
 
 const ThePocoExperienceStyle = styled.section`
   background-color: ${color.background};
+  /* margin-bottom: 6rem; */
 
   .wrap {
     max-width: 40em;

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import ThePocoExperience from '../ThePocoExperience';
 import Seafood from './Seafood';
 import Vegetarian from './Vegetarian';
 import Carne from './Carne';
@@ -9,21 +10,22 @@ import Sides from './Sides';
 
 const FullMenuStyles = styled.section`
 
-  .wrap {
+  /* .wrap {
     max-width: 48em;
-  }
+  } */
 `;
 
 const FullMenu = () => (
   <FullMenuStyles>
     <div className="wrap">
+      <ThePocoExperience />
       <Seafood />
       <Carne />
       <Vegetarian />
-      <Sides />
       <BigPlates />
       <Pizza />
       <Salads />
+      <Sides />
     </div>
   </FullMenuStyles>
 );
